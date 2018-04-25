@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state={
-      movies : [{name:'Star Wars',rating:0},{name:'Avatar',rating:0},{name:'Inception',rating:0}]
+      movies : [{name:'Star Wars',rating:ratingContract.totalVotesFor("Star Wars").toNumber()},{name:'Avatar',rating:ratingContract.totalVotesFor("Avatar").toNumber()},{name:'Inception',rating:ratingContract.totalVotesFor("Inception").toNumber()}]
     }
     this.handleVoting=this.handleVoting.bind(this)
   }
